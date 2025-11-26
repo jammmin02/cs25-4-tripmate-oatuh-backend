@@ -1,0 +1,65 @@
+# OS 별 불필요 파일
+.DS_Store
+Thumbs.db
+
+# PHP / Composer (라라벨은 backend 폴더 안)
+backend/vendor/
+backend/composer.lock
+
+# 환경변수
+backend/.env
+backend/.env.local
+backend/.env.*.local
+.env
+
+# 캐시 / 로그
+backend/storage/*
+!backend/storage/.gitignore
+logs/
+*.log
+
+# PHPUnit
+/phpunit.xml
+/phpunit.xml.cache
+/.phpunit.result.cache
+
+# Docker 관련
+docker-compose.override.yml
+*.pid
+*.seed
+/data/
+/db_data/
+/mysql_data/
+/postgres_data/
+
+# Nginx 관련
+/nginx/
+/docker/nginx/
+/nginx/logs/
+/nginx/cache/
+/certs/
+*.crt
+*.key
+*.pem
+nginx.conf
+default.conf
+/run/nginx.pid
+/var/run/nginx.pid
+
+# IDE & 편집기
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 기타 빌드 산출물 (라라벨 public)
+backend/public/storage
+backend/public/hot
+backend/public/mix-manifest.json
+
+# Coverage & Reports
+coverage/
+.clover
+.php_cs.cache
+.php-cs-fixer.cache
+.phpunit.result.cache
